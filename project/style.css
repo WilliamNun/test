@@ -49,7 +49,8 @@ table {
 	height: 100%;
 	position: absolute;
 	background-image: url(pic/index_bg.jpg);
-	overflow: auto;
+	overflow: hidden;
+	background-size: cover;
 }
 .index{
 	/*display: none;*/
@@ -92,6 +93,23 @@ table {
 	float: left;
 	box-sizing: border-box;
 }
+.action{
+  width: 20%;
+  height: 17px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  margin: 6px 0 0 0;
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 0.1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  background-image: linear-gradient(#4d9cff, #338eff);
+  position: absolute;
+  right: 20%;
+  line-height: 1px;
+}
 .location{
 	width: 7%;
 	float: left;
@@ -101,37 +119,29 @@ table {
 	display: none;
 	background-color: #9accb7;
 	height: 100%;
-	overflow: auto;
+	overflow: hidden;
+	position: relative;
 }
 .rain_rain{
 }
 .rain_cloud1{
 	position: relative;
 	z-index: 3;
-	animation-name: cloudup; 
-	animation-duration: 5s; 
-	animation-timing-function: ease-in-out; 
-	animation-iteration-count: infinite; 
-	animation-direction: alternate;
+	animation: cloudup 5s ease-in-out infinite alternate;
+	-webkit-animation: cloudup 5s ease-in-out infinite alternate;
 }
 .rain_cloud2{
 	position: relative;
 	margin-top: -18%;
 	z-index: 2;
-	animation-name: clouddown; 
-	animation-duration: 5s; 
-	animation-timing-function: ease-in-out; 
-	animation-iteration-count: infinite; 
-	animation-direction: alternate;
+	animation: clouddown 5s ease-in-out infinite alternate;
+	-webkit-animation: clouddown 5s ease-in-out infinite alternate;
 }
 .rain_water{
 	position: absolute;
 	bottom: -10%;
-	animation-name: waterup; 
-	animation-duration: 5s; 
-	animation-timing-function: ease-in-out; 
-	animation-iteration-count: infinite; 
-	animation-direction: alternate;
+	animation: waterup 5s ease-in-out infinite alternate;
+	-webkit-animation: waterup 5s ease-in-out infinite alternate;
 	width: 100%;
 }
 .rain_ship{
@@ -140,11 +150,8 @@ table {
 	bottom: 10%;
 	left: 37%;
 	top: 61%;
-	animation-name: ship; 
-	animation-duration: 5s; 
-	animation-timing-function: ease-in-out; 
-	animation-iteration-count: infinite; 
-	animation-direction: alternate;
+	animation: ship 5s ease-in-out infinite alternate; 
+	-webkit-animation: ship 5s ease-in-out infinite alternate; 
 }
 .rain_putout,.sun_putout{
 	background-color: rgba(0, 0, 0, 0.4);
@@ -204,7 +211,7 @@ table {
 	padding-top: 8%;
 }
 .tem{
-	font-size: 2.2em;
+	font-size: 2em;
 }
 
 
@@ -212,6 +219,7 @@ table {
 	background-color: #e27978;
 	height: 100%;
 	display: none;
+	position: relative;
 }
 .sun_sun{
 	width: 25%;
@@ -219,10 +227,8 @@ table {
 	margin: 0 auto;
 	top: 10%;
 	transform-origin: center;
-	animation-name: sunR; 
-	animation-duration: 5s; 
-	animation-timing-function: linear; 
-	animation-iteration-count: infinite; 
+	animation: sunR 5s linear infinite;
+	-webkit-animation: sunR 5s linear infinite;
 }
 .sun_city{
 	position: absolute;
@@ -234,48 +240,42 @@ table {
 	position: absolute;
 	z-index: 2;
 	left: 26%;
-	top: 81%;
-	animation-name: carR; 
-	animation-duration: 3s; 
-	animation-timing-function: linear; 
-	animation-iteration-count: infinite; 
+	top: 80%;
+	animation: carR 3s linear infinite; 
+	-webkit-animation: carR 3s linear infinite; 
 }
 .sun_car2{
 	width: 10%;
 	position: absolute;
 	z-index: 2;
 	left: 60%;
-	top: 83%;
-	animation-name: carL; 
-	animation-duration: 5s; 
-	animation-timing-function: linear; 
-	animation-iteration-count: infinite; 
+	top: 82%;
+	animation: carL 5s linear infinite;
+	-webkit-animation: carL 5s linear infinite; 
 }
 
 .snow{
 	background-color: #324668;
 	height: 100%;
 	display: none;
+	position: relative;
 }
 .snow1{
 	position: absolute;
 	left: 30%;
 	top: 20%;
 	transform-origin: center;
-	animation-name: sunR; 
-	animation-duration: 5s; 
-	animation-timing-function: linear; 
-	animation-iteration-count: infinite; 
+	animation: sunR 5s linear infinite; 
+	-webkit-animation: sunR 5s linear infinite; 
+
 }
 .snow2{
 	position: absolute;
 	top: 40%;
 	left: 75%;
 	transform-origin: center;
-	animation-name: sunR; 
-	animation-duration: 5s; 
-	animation-timing-function: linear; 
-	animation-iteration-count: infinite; 
+	animation: sunR 5s linear infinite; 
+	-webkit-animation: sunR 5s linear infinite; 
 }
 .snow_water{
 	position: absolute;
@@ -285,21 +285,20 @@ table {
 .snow_plane{
 	position: absolute;
 	top: 45%;
-	animation-name: plane; 
-	animation-duration: 5s; 
-	animation-timing-function: linear; 
-	animation-iteration-count: infinite; 
+	animation: plane 3s linear infinite; 
+	-webkit-animation: plane 3s linear infinite; 
 	z-index: 5;
 }
 .cloud1,.cloud2,.cloud3,.cloud4{
-	animation-name: cloudMove; 
-	animation-timing-function: linear; 
-	animation-iteration-count: infinite; 
+	animation: cloudMove linear infinite;
+	-webkit-animation: cloudMove linear infinite; 
+
 }
 .cloudy{
 	display: none;
 	height: 100%;
 	background-color: #08b295;
+	position: relative;
 }
 .cloud1{
 	position: absolute;
@@ -307,6 +306,7 @@ table {
 	top: 15%;
 	width: 25%;
 	animation-duration: 3s; 
+	-webkit-animation-duration: 3s; 
 }
 .cloud2{
 	position: absolute;
@@ -314,6 +314,7 @@ table {
 	top: 30%;
 	width: 22%;
 	animation-duration: 4s; 
+	-webkit-animation-duration: 4s; 
 }
 .cloud3{
 	position: absolute;
@@ -321,6 +322,7 @@ table {
 	top: 20%;
 	width: 10%;
 	animation-duration: 2s; 
+	-webkit-animation-duration: 2s; 
 }
 .cloud4{
 	position: absolute;
@@ -328,6 +330,7 @@ table {
 	top: 44%;
 	width: 90%;
 	animation-duration: 3s; 
+	-webkit-animation-duration: 3s; 
 }
 .cloud_water{
 	position: absolute;
@@ -339,6 +342,15 @@ table {
 	margin: 0 auto;
 	padding-top: 50%;
 	z-index: 3;
+}
+.arrow{
+	width: 10%;
+  	position: absolute;
+  	right: 0;
+  	top: 50%;
+  	display: none;
+  	animation: arrowMove 1s linear infinite; 
+  	-webkit-animation: arrowMove 1s linear infinite; 
 }
 
 
@@ -373,9 +385,9 @@ table {
 
 @keyframes sunR
 {
-0%   {transform: rotate(0deg);}
-50%   {transform: rotate(180deg);}
-100% {	transform: rotate(360deg);}
+0%   {transform: rotate(0deg);-webkit-transform: rotate(0deg);}
+50%   {transform: rotate(180deg);-webkit-transform: rotate(180deg);}
+100% {	transform: rotate(360deg);-webkit-transform: rotate(360deg);}
 }
 @keyframes carL
 {
@@ -397,9 +409,89 @@ table {
 0%   {left: -30%;}
 100% {left: 100%;}
 }
+@keyframes arrowMove
+{
+0%   {right: 2%;}
+100% {right: 7%;}
+}
 
 
 
+@-webkit-keyframes ship
+{
+0%   { left:20%; top:65%;}
+25%  { left:29%; top:67%;}
+75%  { left:47%; top:63%;}
+100% { left:56%; top:65%;}
+}
+@-webkit-keyframes cloudup
+{
+0%   {top: 0;}
+25%	 {top: -10px;}
+75%	 {top: 0;}
+100% {top: -10px;}
+}
+@-webkit-keyframes clouddown
+{
+0%   {top: -10px;}
+25%	 {top: 0px;}
+75%	 {top: -10px;}
+100% {top: 0px;}
+}
+@-webkit-keyframes waterup
+{
+0%   {bottom: -10%;}
+25%	 {bottom: -8%;}
+75%	 {bottom: -10%;}
+100% {bottom: -8%;}
+}
+
+@-webkit-keyframes sunR
+{
+0%   {transform: rotate(0deg);-webkit-transform: rotate(0deg);}
+50%   {transform: rotate(180deg);-webkit-transform: rotate(180deg);}
+100% {	transform: rotate(360deg);-webkit-transform: rotate(360deg);}
+}
+@-webkit-keyframes carL
+{
+0%   {left: -10%;}
+100% {left: 100%;}
+}
+@-webkit-keyframes carR
+{
+0%   {left: 110%;}
+100% {left: -10%;}
+}
+@-webkit-keyframes plane
+{
+0%   {top: 70%;left: -30%;}
+100% {top: 10%;left: 100%;}
+}
+@-webkit-keyframes cloudMove
+{
+0%   {left: -30%;}
+100% {left: 100%;}
+}
+@-webkit-keyframes arrowMove
+{
+0%   {right: 2%;}
+100% {right: 7%;}
+}
+@media screen and (min-width: 450px) {
+.screen{
+	width: 400px;
+	left: 50%;
+	margin-left: -200px;
+}
+body{
+	background-color: rgb(34, 39, 47);
+}
+.sun_car1{  margin-top: -3%;}
+.sun_car2{  margin-top: -3%;}
+
+
+
+}
 
 
 

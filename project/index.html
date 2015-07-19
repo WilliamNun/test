@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Document</title>
+	<title>weather forecast</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="animate.css">
 	<link rel="stylesheet" type="text/css" href="magicsuggest-min.css">
@@ -22,12 +22,13 @@
 			</div>
 			<div class="input">
 				<div id="magicsuggest"></div>
+				<button type="button" class="action">check</button>
 				<div class="location">
 					<img src="pic/index_po.png">
 				</div>
 			</div>
 		</div>
-		<div class="rain animated fadeInRight">
+		<div class="rain animated fadeDay ">
 			<div class="rain_cloud1"><img src="pic/rain_cloud1.png"></div>
 			<div class="rain_cloud2"><img src="pic/rain_cloud2.png"></div>
 			<div class="rain_rain"><img src="pic/rain_rain.png"></div>
@@ -41,7 +42,7 @@
 				<p class="tem">17C°</p><div class="icon"><img src="pic/rain_icon.png"></div>
 			</div>
 		</div>
-		<div class="sun animated fadeInRight">
+		<div class="sun animated fadeDay ">
 			<div class="sun_sun"><img src="pic/sun.png"></div>
 			<div class="sun_city"><img src="pic/sun_city.png"></div>
 			<div class="sun_car1"><img src="pic/sun_car1.png"></div>
@@ -54,7 +55,7 @@
 				<p class="tem">17C°</p><div class="icon"><img src="pic/sun_icon.png"></div>
 			</div>
 		</div>
-		<div class="snow animated fadeInRight" >
+		<div class="snow animated fadeDay " >
 			<div class="snow1"><img src="pic/snow1.png"></div>
 			<div class="snow2"><img src="pic/snow2.png"></div>
 			<div class="snow_plane"><img src="pic/snow_plane.png"></div>
@@ -67,7 +68,7 @@
 				<p class="tem">17C°</p><div class="icon"><img src="pic/snow_icon.png"></div>
 			</div>
 		</div>
-		<div class="cloudy animated fadeInRight">
+		<div class="cloudy animated fadeDay ">
 			<div class="cloud1"><img src="pic/cloud1.png"></div>
 			<div class="cloud2"><img src="pic/cloud2.png"></div>
 			<div class="cloud3"><img src="pic/cloud3.png"></div>
@@ -82,6 +83,7 @@
 				<p class="tem">17C°</p><div class="icon"><img src="pic/cloud_icon.png"></div>
 			</div>
 		</div>
+		<img class="arrow" src="pic/arrow.png">
 	</div>
 	
 	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
